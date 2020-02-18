@@ -1,0 +1,67 @@
+import { Component } from "@angular/core";
+import {HttpClient} from '@angular/common/http';
+@Component({
+    selector:'page',
+    templateUrl: './login.component.html'
+   /* template:`
+    <form (ngSubmit)="submit1()">
+        Enter name <input [(ngModel)]=login.username name="username" type ="text" required/><br><br>
+        Enter pass <input [(ngModel)]=login.password name="password" type ="password" required/><br><br>
+        <button type="submit" >login </button>
+    </form>
+   
+    <h1 style="color:green">{{msg}}</h1>
+    <h1 style="color:red">{{msg1}}</h1>
+    `
+    */
+
+})
+export class LoginComponent { 
+    city:string;
+    
+    submit2(){
+       /* let url1="https://reqres.in/api/users/2";
+        this.http.get(url1).subscribe(data=>{document.getElementById("i").innerHTML=JSON.stringify(data)});*/
+        let url1="http://api.openweathermap.org/data/2.5/weather?";
+        let query1="q="+this.city;
+        let query2="&APPID=442eb8ab171c5133552d398b207bc1c7";
+        let completeUrl=url1+query1+query2;
+        alert(completeUrl);
+   
+        this.http.get(completeUrl).subscribe(data=>{
+            //alert(data.weather[0].description);
+            //document.getElementById("i").innerHTML=JSON.stringify(data));
+            alert(data.main.temp);
+            this.description = data.weather[0].description;
+        })
+    };
+
+    login: Login =new Login();
+    //Introducing Angular's Http APi(Ajax API)
+    //Introducing DI- Injecting HttpClient object
+    constructor(private http: HttpClient){
+
+    }
+    submit1(){
+        let url="https://reqres.in/api/users/2";
+        this.http.patch(url,this.login).subscribe(data=>{document.getElementById("i").innerHTML=JSON.stringify(data)});
+    /*    let url="https://reqres.in/api/login";
+        this.http.post(url,this.login).subscribe(data=>{alert(JSON.stringify(data))});
+    }
+   /* msg:string;
+    msg1:string;
+    submit1(){
+        alert(JSON.stringify(this.login));
+        if(this.login.username.match("Niki") && this.login.password.match("123")){
+            this.msg="Login successful";
+        }
+        else{
+            this.msg1="Wrong username or password";
+        }
+    }*/
+    }
+}
+class Login{
+    name: string;
+    job : string;
+}

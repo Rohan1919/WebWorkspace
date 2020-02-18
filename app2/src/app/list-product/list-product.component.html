@@ -1,0 +1,18 @@
+<p>list-product works!</p>
+
+<button (click)='onShow()'>click</button>
+
+<div class="card" *ngFor="let p of product;">
+    <!--<img src="../../assets/uploadimg1.jpg" alt="Avatar" style="width:100%"> -->
+   
+   
+   
+    <div class="container">
+       
+      <h4><b>{{p.name}}</b></h4>
+      <p>{{p.price}}</p>
+      <p>{{p.id}}</p>
+      <img src="{{p.imgurl}}" width=400px height=400px />
+      
+    </div>
+  </div>

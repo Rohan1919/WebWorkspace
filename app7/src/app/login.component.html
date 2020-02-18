@@ -1,0 +1,11 @@
+
+
+<div style="border-style:solid;border-width:5px;border-color:red">
+    <form (ngSubmit)="onValidate()">
+        Enter Email : <input name='email' [(ngModel)]=login.email required/><br>
+        Enter Password : <input type='password' name='password' [(ngModel)]=login.password required/>
+        <button type="submit">Login here</button> 
+    </form>
+    
+    <h1 *ngIf='tokens'>{{tokens}}</h1>
+    </div>

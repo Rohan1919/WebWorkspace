@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    
+</head>
+<body>
+    <label>Current Location Cordinates of User</label><br>
+    <button id="loc" onclick="showLocation()">Find Location</button>
+   <div id="google" style="height:400px;width:50%"></div>
+   <p id="demo"></p>
+   
+   <script>
+            
+            var l=document.getElementById("demo");
+            function showLocation(){
+                
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(myMap);
+                     }else{}
+
+             function myMap(pos){
+                            var mapPro= { center : new google.maps.LatLng(pos.coords.latitude,pos.coords.longitude),
+                            zoom:16
+                         };
+                        var map=new google.maps.Map(document.getElementById("google"),mapPro);
+                        var pointer={lat:pos.coords.latitude,lng:pos.coords.longitude};
+                        var marker=new google.maps.Marker({position: pointer,map:map});
+                         }
+            }
+           // function show(position){
+           //     l.innerHTML="Latitude"+position.coords.latitude+"<br>"+"Longitude"+ position.coords.longitude;
+            //}
+
+           
+            
+
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDigYoaO5aCn_hEMEJJCWTTg4VCgf3hbSY&callback=myMap"></script>
+</body>
+</html>

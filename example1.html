@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rohan's Empire</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        function showProgress(){
+            setInterval(change,500);
+            function change(){
+                var pb=document.getElementById("pb");
+                pb.value +=1; 
+            }
+        }
+    function printName(){
+        var name1=document.getElementById("name").value;
+        document.writeln("<h2>"+name1+"</h2>");
+    }
+       
+    </script>
+</head>
+<body onload="showProgress()">
+        <h1>Exploring some new features of HTML5<h1>
+    <progress id="pb" value="50" max="100"></progress><br/>
+    <label>Enter Name: </label><input type="text" placeholder="enter name here" id="name"/><br>
+    <input type="submit" value="Submit" onclick="printName()"/>
+
+    </body>
+</html>

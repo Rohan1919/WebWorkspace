@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        function validateForm(event){
+            event.preventDefault();
+            var x=document.forms["myForm"]["Name"].value;
+            if(x=="")
+            {
+                document.getElementById("mname").innerHTML("error: please enter name");
+                return false;
+            
+            }
+            var y=document.forms["myForm"]["Number"].value;
+            if(y=="")
+            {
+                document.getElementById("mNumber").innerHTML("error: please enter mobile number");
+                return false;
+            
+            }
+            var y=document.forms["myForm"]["Password"].value;
+            if(z=="")
+            {
+                document.getElementById("mPassword").innerHTML("error: please enter password");
+                return false;
+            
+            }
+            
+            
+        }
+    </script>
+     <style>
+        
+        .mai{
+            width:350px;
+            display:block;
+            margin:auto;
+            padding-left: 175px;
+            
+        }
+       
+        .reg{
+            border-radius: 5px;
+           padding-left: 10px;
+            height: 400px;
+            width:320px; 
+            border: 2px solid grey;
+            
+            margin:auto;
+            display: block;
+        }
+
+        .name {
+            display: inline;
+
+        }
+       
+        .email{
+            display:block;
+
+        }
+        .password{
+            display:block;
+        }
+        .cont{
+            width:320px;
+            display:block;
+        }
+        
+        button{
+            color:orangered;
+            margin:auto;
+            display:block;
+            width:200px;
+        }
+        label{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .divB{
+            display: inline;
+        }
+        
+    </style>    
+</head>
+document.myform.Name.value;
+<body>
+    <form name="myForm" onsubmit="validateForm(event)" method="POST">
+        <h1> <div class="mai">Amazon</div></h1>
+            
+        <div class="reg">
+        <p><label style="font-size: xx-large;"> Create Account</label></p> 
+         <p>   <div class="name">
+                <label >Your Name </label></div>
+               <div class="name"> 
+                   <input type="text" id="Name" style="width:300px;height:25px" name="Name" /><scan id="mname" style="font-display: red;"></scan>
+            </div>
+         </p> 
+         
+             <p>
+                 <div class="divB">
+                     <label>Mobile Number</label><br>
+
+                 </div>
+                 <div class="divB">
+                    <select name="countryCode" style="width:50px;height:25px" id="countryCode" required >
+                        <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
+                        <option data-countryCode="US" value="1">USA (+1)</option>
+                        <optgroup label="Other countries">
+                            <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                            <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                            <option data-countryCode="AO" value="244">Angola (+244)</option>
+                            <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                            <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                            <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                        </optgroup>
+                    </select>
+                
+                    <input type="text" name="Number" id="Number"style="width:240px;height:25px" required> <scan id="mNumber" style="font-display: red;"></scan>
+                 </div>
+
+             </p>
+
+          <p><div class="email">
+            <label>Email(optional)</label></div>
+            <div class="email">   <input type="text"name="Email" id="Email" style="width:300px;height:25px" required/>
+        </div>
+        </p>
+        <p><div class="password">
+            <label>Password</label></div>
+            <div class="password"><input type="password" id="Password" name="Password"tyle="width:300px;height:25px" required><scan id="mPassword" style="font-display: red;"></scan>
+            <h6>this password must be 6 character</h6>
+        </div> 
+        </p>
+        <p>
+          
+        <div class="cont">
+            <button style="border-radius: 1px; width:250;height:25px" name="button1" id="button1">CONTINUE</button style:>
+        </div>
+        </p>
+    </div>
+  
+        
+    </form>
+    
+</body>
+</html>

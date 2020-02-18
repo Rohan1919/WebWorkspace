@@ -1,0 +1,18 @@
+<br>
+<div style="text-align:center"><form>
+    Email         : <input type="text" name="name" [(ngModel)]=name /><br>
+    Enter Username: <input type="text" name="user" [(ngModel)]=user /><br>
+    Enter Password: <input type="password" name="pass" [(ngModel)]=pass /><br>
+
+    <select (change)="FirstDropDownChanged($event.target.value)">
+        <option>Select</option>
+        <option *ngFor='let v of state'>{{v}}</option>
+    </select>
+    <select>
+        <option>Select</option>
+        <option *ngFor='let v of cities'>{{v}}</option>
+    </select>
+    <button>Register</button>
+ </form>
+ <a href=".">home</a>
+</div>

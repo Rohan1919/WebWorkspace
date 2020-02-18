@@ -1,0 +1,116 @@
+<html>
+    <head>
+
+        <title>
+        </title>
+        <style>
+        
+            .mai{
+                width:350px;
+                display:block;
+                margin:auto;
+                padding-left: 175px;
+                
+            }
+           
+            .reg{
+                border-radius: 5px;
+               padding-left: 10px;
+                height: 400px;
+                width:320px; 
+                border: 2px solid grey;
+                
+                margin:auto;
+                display: block;
+            }
+
+            .name {
+                display: inline;
+
+            }
+           
+            .email{
+                display:block;
+
+            }
+            .password{
+                display:block;
+            }
+            .cont{
+                width:320px;
+                display:block;
+            }
+            
+            button{
+                color:orangered;
+                margin:auto;
+                display:block;
+                width:200px;
+            }
+            label{
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .divB{
+                display: inline;
+            }
+            
+        </style>    
+    </head>
+
+    <body>
+       <h1> <div class="mai">Amazon</div></h1>
+            
+            <div class="reg">
+            <p><label style="font-size: xx-large;"> Create Account</label></p> 
+             <p>   <div class="name">
+                    <label >Your Name </label></div>
+                   <div class="name"> 
+                       <input type="text" style="width:300px;height:25px" name="Name" />
+                </div>
+             </p> 
+             
+                 <p>
+                     <div class="divB">
+                         <label>Mobile Number</label><br>
+
+                     </div>
+                     <div class="divB">
+                        <select name="countryCode" style="width:50px;height:25px" required >
+                            <option data-countryCode="GB" value="44" Selected>UK (+44)</option>
+                            <option data-countryCode="US" value="1">USA (+1)</option>
+                            <optgroup label="Other countries">
+                                <option data-countryCode="DZ" value="213">Algeria (+213)</option>
+                                <option data-countryCode="AD" value="376">Andorra (+376)</option>
+                                <option data-countryCode="AO" value="244">Angola (+244)</option>
+                                <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+                                <option data-countryCode="ZM" value="260">Zambia (+260)</option>
+                                <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+                            </optgroup>
+                        </select>
+                    
+                        <input type="text" name="Number"style="width:240px;height:25px" required> 
+                     </div>
+
+                 </p>
+
+              <p><div class="email">
+                <label>Email(optional)</label></div>
+                <div class="email">   <input type="text"name="Email" style="width:300px;height:25px" required/>
+            </div>
+            </p>
+            <p><div class="password">
+                <label>Password</label></div>
+                <div class="password"><input type="password" name="Password"tyle="width:300px;height:25px" required>
+                <h6>this password must be 6 character</h6>
+            </div> 
+            </p>
+            <p>
+              
+            <div class="cont">
+                <button style="border-radius: 1px; width:250;height:25px" onclick="file.html">CONTINUE</button style:>
+            </div>
+            </p>
+        </div>
+      
+    </body>
+</html>

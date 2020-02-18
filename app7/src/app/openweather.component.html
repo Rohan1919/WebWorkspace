@@ -1,0 +1,8 @@
+<div>
+<form>
+
+    Enter Your Location : <input type='text' name='location' [(ngModel)]=openwea.location/><br>
+    <button type='submit' (click)='onLocation()'>Search</button>
+</form>
+ <h1 *ngIf="weather1">{{weather1}}</h1> 
+</div>

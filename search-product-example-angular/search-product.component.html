@@ -1,0 +1,12 @@
+<form (ngSubmit)="search()">
+    Enter Product ID : <input [(ngModel)]=id name="id" type="number" />
+    <button type="submit">Search</button>
+</form>
+
+<div class="card" *ngIf="product">
+    <img src="assets/{{product.imageUrl}}" alt="Product" style="width:250px;height:200px">
+    <div class="container">
+        <h4><b>{{product.name}}</b></h4>
+        <p>{{product.price}}</p>
+    </div>
+</div>

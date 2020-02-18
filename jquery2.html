@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+
+        $(function(){
+           $("button").click(function(){
+              // $(this).parent().find("p").remove();
+               $(this).next().remove();
+               //$(this).off("click");
+               var price=5000;
+                var elem=$("<p/>").text("price is "+price+ " Rs");
+                
+                $(this).after(elem);  //this means currenet event
+           }) 
+
+        })
+    
+    </script>
+
+</head>
+<body>
+    
+    <ul style="list-style-type: none;">
+        <li>
+            <h2>Nokia6660</h2>
+            <button>Get Price</button>
+
+        </li>
+    </ul>
+    
+</body>
+</html>
